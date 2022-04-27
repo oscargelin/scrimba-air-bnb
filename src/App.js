@@ -1,7 +1,12 @@
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import CardSection from "./components/CardSection";
 function App() {
   return (
     <>
-      <h2>testing</h2>
+      <Header />
+      <Hero />
+      <CardSection />
     </>
   );
 }

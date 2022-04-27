@@ -1,0 +1,40 @@
+.card {
+  position: relative;
+
+  .mainImg {
+    height: 250px;
+  }
+
+  .btn {
+    display: inline-block;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    padding: 2px;
+    border-radius: 4px;
+    background-color: #fff;
+    p {
+      font-size: 0.8em;
+    }
+  }
+
+  .textSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .firstRow {
+    display: flex;
+    width: 190px;
+    align-items: center;
+    gap: 4px;
+
+    img {
+      height: 12px;
+    }
+
+    span {
+      color: orange;
+    }
+  }
+}
