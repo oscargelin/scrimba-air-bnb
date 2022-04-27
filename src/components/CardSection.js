@@ -1,29 +1,13 @@
 import style from "./CardSection.module.scss";
 import Card from "./Card";
 import swimmerImg from "../images/swimmer.png";
+import data from "../data";
 
 const CardSection = () => {
-  return (
-    <div className={style.cardSection}>
-      <Card
-        img={swimmerImg}
-        btnText="Sold out"
-        stars="5.0"
-        tickets="6"
-        person={{ name: "Katie", nationality: "USA" }}
-        title="Life lessons with Katie"
-        price="$136"
-      />
-      <Card
-        img={swimmerImg}
-        btnText="Sold out"
-        stars="5.0"
-        tickets="6"
-        person={{ name: "Katie", nationality: "USA" }}
-        title="Life lessons with Katie"
-        price="$136"
-      />
-    </div>
-  );
+  let temp = data.map((obj) => {
+    return <Card key={obj.id} obj={obj} />;
+  });
+
+  return <div className={style.cardSection}>{temp}</div>;
 };
 export default CardSection;
