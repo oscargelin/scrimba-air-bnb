@@ -25,20 +25,12 @@ const Card = (props) => {
     arr[i] = <img src={star} key={i} />;
   }
 
-  // Fixade buggen som visade paddingen på btn som inte hade något content
-  let test;
-  if (location !== "Norway") {
-    test = <div className={style.btn}>{btnText}</div>;
-  } else {
-    test = <div></div>;
-  }
-
   console.log(coverImg);
-
+  console.log("123");
   return (
     <div className={style.card}>
       <img src={coverImg} className={style.mainImg} />
-      {test}
+      {btnText && <div className={style.btn}>{btnText}</div>}
       <div className={style.textSection}>
         <div className={style.firstRow}>
           {arr}
